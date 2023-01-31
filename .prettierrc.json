@@ -1,0 +1,26 @@
+{
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript",
+        "singleQuote": true,
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "printWidth": 100,
+        "arrowParens": "avoid"
+      }
+    },
+    {
+      "files": "*.sol",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": false,
+        "bracketSpacing": false,
+        "compiler": "0.8.17"
+      }
+    }
+  ]
+}

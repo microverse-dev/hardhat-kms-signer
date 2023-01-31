@@ -1,0 +1,36 @@
+name: publish package
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: setup
+        id: node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          registry-url: https://npm.pkg.github.com
+          scope: "@microverse-dev"
+          cache: yarn
+          cache-dependency-path: "**/yarn.lock"
+      - name: yarn install
+        run: yarn --frozen-lockfile
+      - name: lint
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          eslint_flags: '--max-warnings=0 src/**/{*.js,*.jsx,*.ts,*.tsx,}'
+          fail_on_error: 'true'
+          reporter: github-pr-review
+      - name: build
+        run: yarn build
+      - name: publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
