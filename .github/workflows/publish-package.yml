@@ -43,7 +43,7 @@ jobs:
           fail_on_error: 'true'
           reporter: github-pr-review
       - name: Build 
-        run: pnpm run Build
+        run: pnpm run build
       - name: Publish   
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
