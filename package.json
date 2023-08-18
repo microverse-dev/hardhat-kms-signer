@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git@github.com:microverse-dev/hardhat-gcp-kms-signer.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "release": {
     "branches": [
       "main"
