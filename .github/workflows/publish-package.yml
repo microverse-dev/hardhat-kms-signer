@@ -3,10 +3,21 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    
+env:
+  CI: true
+  PNPM_CACHE_FOLDER: .pnpm-store
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+      packages: write
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -15,12 +26,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          registry-url: https://npm.pkg.github.com
-          scope: "@microverse-dev"
-          cache: yarn
-          cache-dependency-path: "**/yarn.lock"
-      - name: yarn install
-        run: yarn --frozen-lockfile
+          registry-url: https://registry.npmjs.org
+      - name: Install pnpm
+        run: npm i pnpm@8.5.1 -g
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      - name: Setup pnpm config
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+      - name: Install dependencies
+        run: pnpm install
       - name: lint
         uses: reviewdog/action-eslint@v1
         with:
@@ -28,9 +42,11 @@ jobs:
           eslint_flags: '--max-warnings=0 src/**/{*.js,*.jsx,*.ts,*.tsx,}'
           fail_on_error: 'true'
           reporter: github-pr-review
-      - name: build
-        run: yarn build
-      - name: publish
-        run: yarn publish
+      - name: Build 
+        run: pnpm run Build
+      - name: Publish   
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
+          
