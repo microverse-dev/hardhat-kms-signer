@@ -1,0 +1,61 @@
+name: CI
+
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+
+on: 
+  pull_request:
+    types: [opened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: pnpm setup composite
+        uses: ./.github/actions/pnpm-setup
+        with:
+          node_auth_token: ${{ secrets.NODE_AUTH_TOKEN }}
+
+      - name: Install Deps
+        run: pnpm install --frozen-lockfile
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs:
+      - setup
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: pnpm setup composite
+        uses: ./.github/actions/pnpm-setup
+
+      - name: build
+        run: pnpm build
+
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    needs:
+      - setup
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: pnpm setup composite
+        uses: ./.github/actions/pnpm-setup
+
+      - name: lint
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          eslint_flags: '--max-warnings=0 src/**/{*.js,*.jsx,*.ts,*.tsx,}'
+          fail_on_error: 'true'
+          reporter: github-pr-review

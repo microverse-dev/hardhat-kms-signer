@@ -4,14 +4,15 @@
   "description": "Hardhat plugin for GCP KMS Signer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "h-hara@microverse.co.jp",
+  "author": "microverse inc",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:microverse-dev/hardhat-gcp-kms-signer.git"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "release": {
     "branches": [
@@ -47,6 +48,7 @@
   "scripts": {
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
-    "build": "tsc"
+    "build": "tsc",
+    "semantic:publish": "sh ./publish.sh"
   }
 }
