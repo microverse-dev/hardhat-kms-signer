@@ -2,7 +2,7 @@
 
 This plugin signs Ethereum transaction using KMS key during deployments.
 
-- Inspired by @conduit-xyz/hardhat-gcp-kms-signer
+- Inspired by [@rumblefishdev/hardhat-kms-signer](https://github.com/rumblefishdev/hardhat-kms-signer)
 
 ## Usage
 
@@ -31,9 +31,7 @@ const config: HardhatUserConfig = {
 ## License
 
 - hardhat: MIT - See [LICENSE][hardhet-license] for more information.
-- google-cloud/kms: Apache 2.0 - See [LICENSE][kms-license] for more information.
 - @microverse-dev/hardhat-gcp-kms-signer: MIT - See [LICENSE][license] for more information.
 
 [hardhet-license]: https://github.com/NomicFoundation/hardhat/blob/main/LICENSE
-[kms-license]: https://github.com/googleapis/google-cloud-node/blob/main/LICENSE
 [license]: LICENSE
