@@ -11,7 +11,7 @@ It's assumed that you have AWS access configured and your role perform kms:sign 
 In `hardhat.config.ts` do:
 
 ```
-import "@microverse-dev/hardhat-gcp-kms-signer";
+import "@microverse-dev/hardhat-kms-signer";
 
 ...
 
