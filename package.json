@@ -1,6 +1,6 @@
 {
   "name": "@microverse-dev/hardhat-kms-signer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Hardhat plugin for GCP KMS Signer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
