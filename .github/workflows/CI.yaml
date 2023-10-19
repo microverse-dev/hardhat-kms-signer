@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: pnpm setup composite
         uses: ./.github/actions/pnpm-setup
@@ -28,7 +28,7 @@ jobs:
     needs:
       - setup
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: pnpm setup composite
         uses: ./.github/actions/pnpm-setup
@@ -42,7 +42,7 @@ jobs:
     needs:
       - setup
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: pnpm setup composite
         uses: ./.github/actions/pnpm-setup
