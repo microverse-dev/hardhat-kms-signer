@@ -27,7 +27,7 @@
     "@google-cloud/kms": "3.3.0",
     "asn1.js": "5.4.1",
     "bn.js": "5.2.1",
-    "ethers": "5.7.2",
+    "ethers": "6.13.4",
     "key-encoder": "2.0.3"
   },
   "devDependencies": {
