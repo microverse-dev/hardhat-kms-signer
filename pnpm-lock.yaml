@@ -37,8 +37,8 @@ devDependencies:
     specifier: ^5.1.1
     version: 5.1.1
   '@types/node':
-    specifier: 18.17.6
-    version: 18.17.6
+    specifier: 18.19.59
+    version: 18.19.59
   hardhat:
     specifier: 2.12.6
     version: 2.12.6(ts-node@10.9.1)(typescript@4.9.5)
@@ -53,7 +53,7 @@ devDependencies:
     version: 21.1.1
   ts-node:
     specifier: 10.9.1
-    version: 10.9.1(@types/node@18.17.6)(typescript@4.9.5)
+    version: 10.9.1(@types/node@18.19.59)(typescript@4.9.5)
   typescript:
     specifier: 4.9.5
     version: 4.9.5
@@ -825,7 +825,7 @@ packages:
     engines: {node: ^8.13.0 || >=10.10.0}
     dependencies:
       '@grpc/proto-loader': 0.7.4
-      '@types/node': 20.4.7
+      '@types/node': 18.19.59
     dev: false
 
   /@grpc/proto-loader@0.7.4:
@@ -1602,13 +1602,13 @@ packages:
   /@types/bn.js@4.11.6:
     resolution: {integrity: sha512-pqr857jrp2kPuO9uRjZ3PwnJTjoQy+fcdxvBTvHm6dkmEL9q+hDD/2j/0ELOBPtPnS8LjCX0gI9nbl8lVkadpg==}
     dependencies:
-      '@types/node': 20.4.7
+      '@types/node': 18.19.59
     dev: true
 
   /@types/bn.js@5.1.1:
     resolution: {integrity: sha512-qNrYbZqMx0uJAfKnKclPh+dTwK33KfLHYqtyODwd5HnXOjnkhc4qgn3BrK6RWyGZm5+sIFE7Q7Vz6QQtJB7w7g==}
     dependencies:
-      '@types/node': 18.17.6
+      '@types/node': 18.19.59
 
   /@types/elliptic@6.4.14:
     resolution: {integrity: sha512-z4OBcDAU0GVwDTuwJzQCiL6188QvZMkvoERgcVjq0/mPM8jCfdwZ3x5zQEVoL9WCAru3aG5wl3Z5Ww5wBWn7ZQ==}
@@ -1643,11 +1643,14 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node@18.17.6:
-    resolution: {integrity: sha512-fGmT/P7z7ecA6bv/ia5DlaWCH4YeZvAQMNpUhrJjtAhOhZfoxS1VLUgU2pdk63efSjQaOJWdXMuAJsws+8I6dg==}
+  /@types/node@18.19.59:
+    resolution: {integrity: sha512-vizm2EqwV/7Zay+A6J3tGl9Lhr7CjZe2HmWS988sefiEmsyP9CeXEleho6i4hJk/8UtZAo0bWN4QPZZr83RxvQ==}
+    dependencies:
+      undici-types: 5.26.5
 
   /@types/node@20.4.7:
     resolution: {integrity: sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==}
+    dev: true
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1656,13 +1659,13 @@ packages:
   /@types/pbkdf2@3.1.0:
     resolution: {integrity: sha512-Cf63Rv7jCQ0LaL8tNXmEyqTHuIJxRdlS5vMh1mj5voN4+QFhVZnlZruezqpWYDiJ8UTzhP0VmeLXCmBk66YrMQ==}
     dependencies:
-      '@types/node': 20.4.7
+      '@types/node': 18.19.59
     dev: true
 
   /@types/secp256k1@4.0.3:
     resolution: {integrity: sha512-Da66lEIFeIz9ltsdMZcpQvmrmmoqrfju8pm1BH8WbYjZSwUgCwXLb9C+9XYogwBITnbsSaMdVPb2ekf7TV+03w==}
     dependencies:
-      '@types/node': 20.4.7
+      '@types/node': 18.19.59
     dev: true
 
   /@vue/compiler-core@3.3.4:
@@ -3251,7 +3254,7 @@ packages:
       solc: 0.7.3(debug@4.3.4)
       source-map-support: 0.5.21
       stacktrace-parser: 0.1.10
-      ts-node: 10.9.1(@types/node@18.17.6)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.19.59)(typescript@4.9.5)
       tsort: 0.0.1
       typescript: 4.9.5
       undici: 5.16.0
@@ -4716,7 +4719,7 @@ packages:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 20.4.7
+      '@types/node': 18.19.59
       long: 5.2.1
     dev: false
 
@@ -4735,7 +4738,7 @@ packages:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 20.4.7
+      '@types/node': 18.19.59
       long: 5.2.1
     dev: false
 
@@ -5427,7 +5430,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-node@10.9.1(@types/node@18.17.6)(typescript@4.9.5):
+  /ts-node@10.9.1(@types/node@18.19.59)(typescript@4.9.5):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -5446,7 +5449,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.17.6
+      '@types/node': 18.19.59
       acorn: 8.8.2
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -5575,6 +5578,9 @@ packages:
   /underscore@1.13.6:
     resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
     dev: false
+
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
   /undici@5.16.0:
     resolution: {integrity: sha512-KWBOXNv6VX+oJQhchXieUznEmnJMqgXMbs0xxH2t8q/FUAWSJvOSr/rMaZKnX5RIVq7JDn0JbP4BOnKG2SGXLQ==}
