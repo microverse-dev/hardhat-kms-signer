@@ -37,7 +37,7 @@
     "@semantic-release/git": "^10.0.1",
     "@trivago/prettier-plugin-sort-imports": "4.0.0",
     "@types/bn.js": "^5.1.1",
-    "@types/node": "18.17.6",
+    "@types/node": "18.19.59",
     "hardhat": "2.12.6",
     "husky": "^8.0.3",
     "prettier": "2.8.8",
