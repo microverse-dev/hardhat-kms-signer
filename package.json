@@ -19,7 +19,7 @@
       "main"
     ]
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.15.9",
   "files": [
     "dist"
   ],
