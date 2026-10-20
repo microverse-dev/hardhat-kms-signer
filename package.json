@@ -24,7 +24,7 @@
     "dist"
   ],
   "dependencies": {
-    "@google-cloud/kms": "3.3.0",
+    "@google-cloud/kms": "3.8.0",
     "asn1.js": "5.4.1",
     "bn.js": "5.2.1",
     "ethers": "5.7.2",
@@ -46,7 +46,7 @@
     "typescript": "4.9.5"
   },
   "peerDependencies": {
-    "@google-cloud/kms": "3.0.1",
+    "@google-cloud/kms": "3.8.0",
     "hardhat": "2.12.0"
   },
   "scripts": {
